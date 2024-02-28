@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1" // Testskript hinzugefügt
   },
   "dependencies": {
     "axios": "^1.6.4",
@@ -27,12 +27,12 @@
   "main": "next.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/appjonathan/weatherapp.git"
+    "url": "git+https://github.com/matze1113/weatherapp1.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/appjonathan/weatherapp/issues"
+    "url": "https://github.com/matze1113/weatherapp1/issues"
   },
-  "homepage": "https://github.com/appjonathan/weatherapp#readme"
+  "homepage": "https://github.com/matze1113/weatherapp1#readme"
 }
