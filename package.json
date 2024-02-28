@@ -14,7 +14,8 @@
     "next": "^13.5.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.11.0"
+    "react-icons": "^4.11.0",
+    "snyk": "^1.1280.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
@@ -36,5 +37,3 @@
   },
   "homepage": "https://github.com/matze1113/weatherapp1#readme"
 }
-
-
