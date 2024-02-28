@@ -17,6 +17,9 @@ jobs:
     - name: Install or update npm
       run: npm install -g npm@latest 
 
+    - name: Update npx
+      run: npm install -g npx@latest 
+
     - name: Checkout Repository
       uses: actions/checkout@v2
       
@@ -46,4 +49,5 @@ jobs:
         to: popow80@web.de
         body: |
           There is a security issue found in the application. Please take immediate action.
+
 
