@@ -1,19 +1,24 @@
 name: CI
-on: [push]
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
     - name: Install dependencies
       run: npm ci
+
     - name: Build
       run: npm run build
-    - name: Run Snyk to check for vulnerabilities
-      uses: snyk/actions/node@master
-      env:
-        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-      
+
     - name: Run Snyk for Security Check
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
@@ -31,5 +36,4 @@ jobs:
         to: popow80@web.de
         body: |
           There is a security issue found in the application. Please take immediate action.
-
 
