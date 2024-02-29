@@ -20,9 +20,12 @@ jobs:
       run: npm run build
 
     - name: Run Snyk for Security Check
+      uses: snyk/actions/node@master
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-      run: npx snyk test
+      with:  
+          args: --severity-threshold=high
+          command: test
 
     - name: Send Email on Issue
       if: ${{ failure() }}
@@ -35,5 +38,5 @@ jobs:
         subject: Security Issue in Next.js/React Application
         to: popow80@web.de
         body: |
-          There is a security issue found in the application. Please take immediate action.
+          There is a security issue found in the application. Please take immediate action
 
